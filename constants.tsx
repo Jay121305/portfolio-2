@@ -54,7 +54,7 @@ export const projectsData: Project[] = [
         description: '',
         longDescription: 'A comprehensive health management platform designed for migrants, utilizing OCR for document processing and AI to provide accessible and unified healthcare support.',
         tags: ['react', 'vite', 'nodejs', 'mongodb', 'ocr', 'ai'],
-        image: '/assets/migrant-health.png',
+        image: '/migrant-health.png',
         html_url: 'https://github.com/Jay121305/Migrant-Health-Management'
     }
 ];
