@@ -22,7 +22,7 @@ export const projectsData: Project[] = [
         description: '',
         longDescription: 'An innovative urban crowd-sensing application that monitors real-time crowd density using advanced deep learning models and geofencing, providing crucial safety insights.',
         tags: ['deep-learning', 'flutter', 'firebase', 'flask', 'tensorflow', 'google-maps'],
-        image: '/assets/urban-crowd-sense.png',
+        image: '/urban-crowd-sense.png',
         html_url: 'https://github.com/Jay121305/MindTheGap-Urban_CrowdSense'
     },
     {
@@ -30,7 +30,7 @@ export const projectsData: Project[] = [
         description: '',
         longDescription: 'A powerful AI system that generates descriptive captions and performs precise segmentation for images, combining computer vision and natural language processing techniques.',
         tags: ['tensorflow', 'cnn', 'nlp', 'opencv', 'image-captioning', 'segmentation'],
-        image: '/assets/image-captioning.png',
+        image: '/image-captioning.png',
         html_url: 'https://github.com/Jay121305/AI-Driven-Image-Captioning-and-Segmentation'
     },
     {
@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
         description: '',
         longDescription: 'An intelligent system that analyzes and summarizes multilingual product reviews, leveraging large language models to extract sentiment and key insights for businesses.',
         tags: ['llm', 'rag', 'nlp', 'gcp', 'sentiment-analysis', 'summarization'],
-        image: '/assets/multilingual-review.png',
+        image: '/multilingual-review.png',
         html_url: 'https://github.com/Jay121305/AI-Powered-Multilingual-Review-Analysis-Summarization-System'
     },
     {
@@ -46,7 +46,7 @@ export const projectsData: Project[] = [
         description: '',
         longDescription: 'A novel security solution that uses a genetic algorithm for hybrid encryption, securely embedding text within images to ensure data confidentiality and integrity.',
         tags: ['cryptography', 'genetic-algorithm', 'image-encryption', 'python', 'security', 'steganography'],
-        image: '/assets/hybrid-encryption.png',
+        image: '/hybrid-encryption.png',
         html_url: 'https://github.com/Jay121305/Hybrid-Image-Text-Encryption-using-Genetic-Algorithm-'
     },
     {
