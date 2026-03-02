@@ -141,25 +141,25 @@ export const certificationsData = [
     {
         name: 'AWS Cloud Technology Consultant',
         provider: 'Amazon Web Services',
-        url: '/certificates/Coursera final.pdf',
+        url: 'certificates/Coursera final.pdf',
         isMajor: true
     },
     {
         name: 'Machine Learning',
         provider: 'InternForte',
-        url: '/certificates/Machine_Learning-Jay_Gautam.pdf',
+        url: 'certificates/Machine_Learning-Jay_Gautam.pdf',
         isMajor: true
     },
     {
         name: 'Health in Pixels - Startup Hackathon 2025',
         provider: 'Startup Hackathon Cohort 2025',
-        url: '/certificates/Health_in_Pixels_Startup_Hackathon_2025.pdf',
+        url: 'certificates/Health_in_Pixels_Startup_Hackathon_2025.pdf',
         isMajor: false
     },
     {
         name: 'TechFiesta 2026 - DDos_Me_Daddy',
         provider: 'Pune Institute of Computer Technology (PICT)',
-        url: '/certificates/TechFiesta_2026_DDos_Me_Daddy.pdf',
+        url: 'certificates/TechFiesta_2026_DDos_Me_Daddy.pdf',
         isMajor: false
     },
 ];

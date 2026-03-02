@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+﻿import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useScrollSpy, useIntersectionObserver } from './hooks';
 import type { Project, EducationItem } from './types';
 import { 
@@ -452,7 +452,7 @@ const Hero: React.FC = () => (
                            className="cursor-target px-6 py-3 bg-green-accent text-dark-bg text-sm font-semibold rounded-md hover:shadow-glow-md transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-wider">
                             <TrueFocus sentence="View Projects" blurAmount={3} borderColor="#0a0a0a" glowColor="rgba(10,10,10,0.4)" animationDuration={0.4} pauseBetweenAnimations={1.5} />
                         </a>
-                        <a href="/JayGautam_VIT_Pune.pdf" download="JayGautam_VIT_Pune.pdf"
+                        <a href="/JayGautam_VIT_Pune.pdf`} download="JayGautam_VIT_Pune.pdf`}
                            className="cursor-target px-6 py-3 border border-neutral-700 text-neutral-300 text-sm font-medium rounded-md hover:border-green-accent hover:text-green-accent transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-wider">
                             <TrueFocus sentence="Download Resume" blurAmount={3} borderColor="#4ade80" glowColor="rgba(74,222,128,0.4)" animationDuration={0.4} pauseBetweenAnimations={1.5} />
                         </a>
@@ -462,7 +462,7 @@ const Hero: React.FC = () => (
                 {/* Right   hero image */}
                 <div className="hidden lg:flex items-center justify-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                     <div className="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden lorris-card">
-                        <img src="/Jay.png" alt="Jay Gautam" className="w-full h-full object-cover" />
+                        <img src={`${import.meta.env.BASE_URL}Jay.png`} alt="Jay Gautam" className="w-full h-full object-cover" />
                         {/* Decorative corner accents */}
                         <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-green-accent/30 rounded-tl-2xl"></div>
                         <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-green-accent/30 rounded-br-2xl"></div>
@@ -694,17 +694,17 @@ const Hackathons: React.FC = () => (
                                     <span className="text-xs text-green-accent/70 font-mono uppercase tracking-wider">{hackathon.achievement}</span>
                                     {hackathon.name === 'InnerveX' && (
                                         <div className="mt-3 rounded-lg overflow-hidden border border-neutral-800/50">
-                                            <img src="/innervex.png" alt="InnerveX Hackathon" className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+                                            <img src={`${import.meta.env.BASE_URL}innervex.png`} alt="InnerveX Hackathon" className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
                                         </div>
                                     )}
                                     {hackathon.name === 'Bajaj HackRX 6.0' && (
                                         <div className="mt-3 rounded-lg overflow-hidden border border-neutral-800/50">
-                                            <img src="/BajajHackRX6.0.png" alt="Bajaj HackRX 6.0" className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+                                            <img src={`${import.meta.env.BASE_URL}BajajHackRX6.0.png`} alt="Bajaj HackRX 6.0" className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
                                         </div>
                                     )}
                                     {hackathon.name === 'Project Morpheus' && (
                                         <div className="mt-3 rounded-lg overflow-hidden border border-neutral-800/50">
-                                            <img src="/morpheus.png" alt="Project Morpheus" className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+                                            <img src={`${import.meta.env.BASE_URL}morpheus.png`} alt="Project Morpheus" className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
                                         </div>
                                     )}
                                 </div>
@@ -878,7 +878,7 @@ const Achievements: React.FC = () => {
                                 <span className="text-green-accent mr-2 mt-0.5 text-[10px]">&#9656;</span>
                                 <div className="flex-1">
                                     <span className="text-base text-neutral-200 font-medium">
-                                        {cert.name}   <a href={cert.url} target="_blank" rel="noopener noreferrer" className="cursor-target text-green-accent hover:underline">{cert.provider}</a>
+                                        {cert.name}   <a href={`${import.meta.env.BASE_URL}${cert.url}`} target="_blank" rel="noopener noreferrer" className="cursor-target text-green-accent hover:underline">{cert.provider}</a>
                                     </span>
                                 </div>
                             </div>
@@ -892,7 +892,7 @@ const Achievements: React.FC = () => {
                                 <span className="text-green-accent mr-2 mt-0.5 text-[10px]">&#9656;</span>
                                 <div className="flex-1">
                                     <span className="text-sm text-neutral-400">
-                                        {cert.name}   <a href={cert.url} target="_blank" rel="noopener noreferrer" className="cursor-target text-green-accent/70 hover:underline">{cert.provider}</a>
+                                        {cert.name}   <a href={`${import.meta.env.BASE_URL}${cert.url}`} target="_blank" rel="noopener noreferrer" className="cursor-target text-green-accent/70 hover:underline">{cert.provider}</a>
                                     </span>
                                 </div>
                             </div>
@@ -903,24 +903,24 @@ const Achievements: React.FC = () => {
                     {showAllCertificates && (
                         <div className="mt-4 pt-4 border-t border-neutral-800/50">
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                                <a href="/certificates/Coursera%201.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 1</a>
-                                <a href="/certificates/Coursera%202.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 2</a>
-                                <a href="/certificates/Coursera%203.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 3</a>
-                                <a href="/certificates/Coursera%204.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 4</a>
-                                <a href="/certificates/Coursera%205.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 5</a>
-                                <a href="/certificates/Coursera%206.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 6</a>
-                                <a href="/certificates/Coursera%207.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 7</a>
-                                <a href="/certificates/Coursera%208.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 8</a>
-                                <a href="/certificates/Coursera%209.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 9</a>
-                                <a href="/certificates/sql_basic%20certificate.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">SQL Basic</a>
-                                <a href="/certificates/sql_intermediate%20certificate.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">SQL Intermediate</a>
-                                <a href="/certificates/sql_advanced%20certificate.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">SQL Advanced</a>
-                                <a href="/certificates/ProdigyInfotech_Internship_Certificate.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Prodigy Infotech Internship</a>
-                                <a href="/certificates/Training%20Certificate.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Training Certificate</a>
-                                <a href="/certificates/N_04_Jay_Gautam_DT_Certificate.png" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Digital Technology</a>
-                                <a href="/certificates/Health_in_Pixels_Startup_Hackathon_2025.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Health in Pixels Hackathon</a>
-                                <a href="/certificates/TechFiesta_2026_DDos_Me_Daddy.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">TechFiesta 2026</a>
-                                <a href="/certificates/Innoverse%20Participation%20Certificate%20__name__.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Innoverse Participation</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Coursera%201.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 1</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Coursera%202.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 2</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Coursera%203.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 3</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Coursera%204.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 4</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Coursera%205.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 5</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Coursera%206.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 6</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Coursera%207.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 7</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Coursera%208.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 8</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Coursera%209.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">AWS Fundamentals 9</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/sql_basic%20certificate.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">SQL Basic</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/sql_intermediate%20certificate.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">SQL Intermediate</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/sql_advanced%20certificate.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">SQL Advanced</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/ProdigyInfotech_Internship_Certificate.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Prodigy Infotech Internship</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Training%20Certificate.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Training Certificate</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/N_04_Jay_Gautam_DT_Certificate.png`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Digital Technology</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Health_in_Pixels_Startup_Hackathon_2025.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Health in Pixels Hackathon</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/TechFiesta_2026_DDos_Me_Daddy.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">TechFiesta 2026</a>
+                                <a href={`${import.meta.env.BASE_URL}certificates/Innoverse%20Participation%20Certificate%20__name__.pdf`} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-green-accent transition-colors p-2 bg-neutral-900/50 rounded-md">Innoverse Participation</a>
                             </div>
                         </div>
                     )}
