@@ -585,7 +585,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             style={{ transform, transition: 'transform 0.3s ease-out' }}
         >
             <div className="h-44 overflow-hidden bg-gradient-to-br from-green-accent/5 to-transparent">
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                <img src={`${import.meta.env.BASE_URL}${project.image}`} alt={project.title} className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
             </div>
             <div className="p-5 flex flex-col flex-grow">
                 <h3 className="text-base font-display font-semibold text-neutral-100 mb-2 line-clamp-2 min-h-[2.5rem]">
@@ -720,14 +720,14 @@ const Hackathons: React.FC = () => (
 // Journey Timeline   prominent zigzag design
 const JourneyTimeline: React.FC = () => {
     const timelineEvents = [
-        { year: '2023-2027', title: 'VIT Pune', category: 'Education', desc: 'B.Tech Computer Engineering', icon: '??' },
-        { year: 'Jan 2026', title: 'IEEE Publication #2', category: 'Achievement', desc: 'Second research paper published', icon: '??' },
-        { year: '2025-2026', title: 'Technical Lead', category: 'Experience', desc: 'VishwaShauryam, VIT Pune', icon: '??' },
-        { year: 'Sep�Oct 2024', title: 'Data Science Intern', category: 'Experience', desc: 'Zidio Development', icon: '??' },
-        { year: '2025', title: 'AWS Certified', category: 'Certification', desc: 'Cloud Technology Consultant', icon: '??' },
-        { year: 'Dec 2024', title: 'IEEE Publication #1', category: 'Achievement', desc: 'IoT Waste Fire Mapping', icon: '??' },
-        { year: 'Oct 2023�Mar 2024', title: 'Social Media Head', category: 'Experience', desc: 'College Club', icon: '??' },
-        { year: '2011-2023', title: 'Mount St. Patrick School', category: 'Education', desc: 'High School', icon: '??' },
+        { year: '2023-2027', title: 'VIT Pune', category: 'Education', desc: 'B.Tech Computer Engineering', icon: '\uD83C\uDF93' },
+        { year: 'Jan 2026', title: 'IEEE Publication #2', category: 'Achievement', desc: 'Second research paper published', icon: '\uD83D\uDCC4' },
+        { year: '2025-2026', title: 'Technical Lead', category: 'Experience', desc: 'VishwaShauryam, VIT Pune', icon: '\uD83D\uDE80' },
+        { year: 'Sep - Oct 2024', title: 'Data Science Intern', category: 'Experience', desc: 'Zidio Development', icon: '\uD83D\uDCBC' },
+        { year: '2025', title: 'AWS Certified', category: 'Certification', desc: 'Cloud Technology Consultant', icon: '\u2601\uFE0F' },
+        { year: 'Dec 2024', title: 'IEEE Publication #1', category: 'Achievement', desc: 'IoT Waste Fire Mapping', icon: '\uD83D\uDCC4' },
+        { year: 'Oct 2023 - Mar 2024', title: 'Social Media Head', category: 'Experience', desc: 'College Club', icon: '\uD83D\uDCF1' },
+        { year: '2011-2023', title: 'Mount St. Patrick School', category: 'Education', desc: 'High School', icon: '\uD83C\uDFEB' },
     ]
 
     const categoryColor: Record<string, string> = {
