@@ -452,7 +452,7 @@ const Hero: React.FC = () => (
                            className="cursor-target px-6 py-3 bg-green-accent text-dark-bg text-sm font-semibold rounded-md hover:shadow-glow-md transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-wider">
                             <TrueFocus sentence="View Projects" blurAmount={3} borderColor="#0a0a0a" glowColor="rgba(10,10,10,0.4)" animationDuration={0.4} pauseBetweenAnimations={1.5} />
                         </a>
-                        <a href="/JayGautam_VIT_Pune.pdf`} download="JayGautam_VIT_Pune.pdf`}
+                        <a href={`${import.meta.env.BASE_URL}JayGautam_VIT_Pune.pdf`} download="JayGautam_VIT_Pune.pdf"
                            className="cursor-target px-6 py-3 border border-neutral-700 text-neutral-300 text-sm font-medium rounded-md hover:border-green-accent hover:text-green-accent transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-wider">
                             <TrueFocus sentence="Download Resume" blurAmount={3} borderColor="#4ade80" glowColor="rgba(74,222,128,0.4)" animationDuration={0.4} pauseBetweenAnimations={1.5} />
                         </a>
