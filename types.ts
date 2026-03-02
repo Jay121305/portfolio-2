@@ -5,6 +5,7 @@ export interface Project {
   tags: string[];
   image: string;
   html_url?: string;
+  liveUrl?: string;
 }
 
 export interface SkillCategory {
@@ -15,6 +16,7 @@ export interface SkillCategory {
 export interface Experience {
   role: string;
   context: string;
+  period?: string;
   description: string;
 }
 
@@ -29,4 +31,18 @@ export interface EducationItem {
 export interface NavLink {
   name: string;
   href: string;
+  children?: NavLink[];
+}
+
+export interface Hackathon {
+  name: string;
+  achievement: string;
+}
+
+export interface Publication {
+  title: string;
+  venue: string;
+  year: string;
+  date?: string;
+  url: string;
 }

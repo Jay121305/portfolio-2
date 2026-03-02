@@ -1,13 +1,16 @@
 import React from 'react';
-import type { Project, SkillCategory, Experience, NavLink, EducationItem } from './types';
+import type { Project, SkillCategory, Experience, NavLink, EducationItem, Hackathon, Publication } from './types';
 
 export const navLinks: NavLink[] = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Education', href: '#education' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
+  { name: 'About', href: '#about', children: [
+    { name: 'Education', href: '#education' },
+  ]},
+  { name: 'Experience', href: '#experience', children: [
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Hackathons', href: '#hackathons' },
+  ]},
+  { name: 'Beyond Work', href: '#beyond-work' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -39,7 +42,8 @@ export const projectsData: Project[] = [
         longDescription: 'An intelligent system that analyzes and summarizes multilingual product reviews, leveraging large language models to extract sentiment and key insights for businesses.',
         tags: ['llm', 'rag', 'nlp', 'gcp', 'sentiment-analysis', 'summarization'],
         image: '/multilingual-review.png',
-        html_url: 'https://github.com/Jay121305/AI-Powered-Multilingual-Review-Analysis-Summarization-System'
+        html_url: 'https://github.com/Jay121305/AI-Powered-Multilingual-Review-Analysis-Summarization-System',
+        liveUrl: 'https://jay121305.github.io/AI-Powered-Multilingual-Review-Analysis-Summarization-System/'
     },
     {
         title: 'Hybrid-Image-Text-Encryption-using-Genetic-Algorithm-',
@@ -47,7 +51,8 @@ export const projectsData: Project[] = [
         longDescription: 'A novel security solution that uses a genetic algorithm for hybrid encryption, securely embedding text within images to ensure data confidentiality and integrity.',
         tags: ['cryptography', 'genetic-algorithm', 'image-encryption', 'python', 'security', 'steganography'],
         image: '/hybrid-encryption.png',
-        html_url: 'https://github.com/Jay121305/Hybrid-Image-Text-Encryption-using-Genetic-Algorithm-'
+        html_url: 'https://github.com/Jay121305/Hybrid-Image-Text-Encryption-using-Genetic-Algorithm-',
+        liveUrl: 'https://hybrid-image-and-text-encryption-using.onrender.com'
     },
     {
         title: 'Migrant-Health-Management',
@@ -60,12 +65,10 @@ export const projectsData: Project[] = [
 ];
 
 export const skillsData: SkillCategory[] = [
-    { title: 'Programming', skills: ['Python', 'Java', 'JavaScript', 'C++'] },
-    { title: 'Web Development', skills: ['React', 'Node.js', 'Express.js', 'Tailwind', 'Firebase'] },
-    { title: 'AI/ML', skills: ['LLMs', 'OCR', 'RAG', 'Regression', 'NLP', 'Text Summarization'] },
-    { title: 'Databases & Cloud', skills: ['MongoDB', 'Firestore', 'SQL', 'AWS', 'Google Cloud'] },
-    { title: 'Tools', skills: ['GitHub', 'Canva', 'VS Code', 'Cursor', 'Colab'] },
-    { title: 'Visualization', skills: ['Matplotlib', 'Chart.js', 'Dashboards'] },
+    { title: 'Languages', skills: ['C', 'C++', 'Java', 'Python', 'JavaScript', 'TypeScript', 'HTML/CSS', 'SQL'] },
+    { title: 'Frameworks & Libraries', skills: ['React', 'Node.js', 'Express.js', 'Next.js', 'Flutter', 'Spring Boot', 'TensorFlow', 'PyTorch'] },
+    { title: 'Tools & Technologies', skills: ['Git', 'GitHub', 'AWS', 'MongoDB', 'MySQL', 'REST APIs', 'Linux', 'Android Studio'] },
+    { title: 'Core Competencies', skills: ['Data Structures & Algorithms', 'Object-Oriented Programming', 'Machine Learning', 'Deep Learning', 'Full-Stack Development', 'System Design', 'Agile Methodologies'] },
 ];
 
 export const aboutHighlights = [
@@ -77,12 +80,12 @@ export const aboutHighlights = [
 
 export const heroStats = [
     { number: '12+', label: 'Projects' },
-    { number: '1', label: 'Publication' },
+    { number: '2', label: 'Publications' },
 ];
 
 export const educationData: EducationItem[] = [
     {
-        year: '2023–2027',
+        year: '2023-2027',
         institution: 'VIT Pune',
         degree: 'B.Tech in Computer Engineering',
         focus: 'AI, ML, and Data Systems',
@@ -97,7 +100,7 @@ export const educationData: EducationItem[] = [
         ]
     },
     {
-        year: '2011–2023',
+        year: '2011-2023',
         institution: 'Mount St. Patrick\'s Academy',
         degree: 'High School',
         focus: 'Science & Computer Applications',
@@ -113,16 +116,22 @@ export const educationData: EducationItem[] = [
 ];
 
 export const experienceData: Experience[] = [
-    { role: 'Intern', context: 'Zidio Development', description: 'Worked on backend optimization and UI design improvements.' },
-    { role: 'Social Media Head', context: 'College Club', description: 'Led digital strategy and improved engagement for campus events.' },
-    { role: 'Hackathon Lead', context: 'TermSheet Validation using AI', description: 'Led a 5-member team to build an AI-powered document validation system using OCR and LLMs.' },
-    { role: 'Hackathon Participant', context: 'Smart India Hackathon 2024 & 2025', description: 'Developed solutions for national-level problem statements in a competitive, team-based environment.'},
-    { role: 'Hackathon Participant', context: 'Bajaj HackRx 2025, EY Techathon 6.0, Adobe Hackathon', description: 'Engaged in multiple industry-led hackathons, tackling real-world business challenges.' },
-    { role: 'Hackathon Participant', context: 'Startup Hackathon 2.0', description: 'Collaborated in a fast-paced setting to conceptualize and prototype an innovative startup idea.' },
+    { role: 'Technical Lead', context: 'VishwaShauryam, VIT Pune', period: 'Sep 2025 - May 2026', description: 'Led end-to-end website development (UI/UX, backend, deployment), driving 800+ monthly visitors and boosting event registrations by 35%. Managed tech campaigns and event infra for 8+ events (300+ attendees each), leading a 6-member team with 100% uptime.' },
+    { role: 'Intern', context: 'Zidio Development', period: 'Sep 2024 - Oct 2024', description: 'Worked on backend optimization and UI design improvements.' },
+    { role: 'Social Media Head', context: 'College Club', period: 'Oct 2023 - Mar 2024', description: 'Led digital strategy and improved engagement for campus events.' },
+];
+
+export const hackathonsData: Hackathon[] = [
+    { name: 'Smart India Hackathon 2025', achievement: 'Finalist' },
+    { name: 'InnerveX', achievement: 'Finalist' },
+    { name: 'NEST 2.0', achievement: 'Finalist' },
+    { name: 'Bajaj HackRX 6.0', achievement: 'Finalist' },
+    { name: 'Hack for Bharat', achievement: 'Finalist' },
+    { name: 'Project Morpheus', achievement: 'Finalist' },
 ];
 
 export const achievementsData: string[] = [
-    'Finalist in AI-based Document Validation Hackathon',
+    'Finalist in Smart India Hackathon 2025',
     '10+ projects across AI, IoT, and System Design',
     'Recognized for innovation and creative system integration',
     'Designed & deployed multiple applications independently',
@@ -140,15 +149,35 @@ export const certificationsData = [
         provider: 'InternForte',
         url: '/certificates/Machine_Learning-Jay_Gautam.pdf',
         isMajor: true
-    }
+    },
+    {
+        name: 'Health in Pixels - Startup Hackathon 2025',
+        provider: 'Startup Hackathon Cohort 2025',
+        url: '/certificates/Health_in_Pixels_Startup_Hackathon_2025.pdf',
+        isMajor: false
+    },
+    {
+        name: 'TechFiesta 2026 - DDos_Me_Daddy',
+        provider: 'Pune Institute of Computer Technology (PICT)',
+        url: '/certificates/TechFiesta_2026_DDos_Me_Daddy.pdf',
+        isMajor: false
+    },
 ];
 
-export const publicationsData = [
+export const publicationsData: Publication[] = [
     {
         title: 'IoT Enabled Waste Fire Pollution Mapping',
         venue: 'IEEE Xplore',
-        year: '2024',
+        year: 'December 2024',
+        date: 'December 3, 2024',
         url: 'https://ieeexplore.ieee.org/document/10763240'
+    },
+    {
+        title: 'IEEE Conference Publication',
+        venue: 'IEEE Xplore',
+        year: 'January 2026',
+        date: 'January 30, 2026',
+        url: 'https://ieeexplore.ieee.org/document/11362604'
     }
 ];
 
