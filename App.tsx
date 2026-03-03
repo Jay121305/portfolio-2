@@ -452,7 +452,7 @@ const Hero: React.FC = () => (
                            className="cursor-target px-6 py-3 bg-green-accent text-dark-bg text-sm font-semibold rounded-md hover:shadow-glow-md transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-wider">
                             <TrueFocus sentence="View Projects" blurAmount={3} borderColor="#0a0a0a" glowColor="rgba(10,10,10,0.4)" animationDuration={0.4} pauseBetweenAnimations={1.5} />
                         </a>
-                        <a href={`${import.meta.env.BASE_URL}JayGautam_VIT_Pune.pdf`} download="JayGautam_VIT_Pune.pdf"
+                        <a href={`${import.meta.env.BASE_URL}JayGautam_VIT_Pune%20(1).pdf`} download="JayGautam_VIT_Pune (1).pdf"
                            className="cursor-target px-6 py-3 border border-neutral-700 text-neutral-300 text-sm font-medium rounded-md hover:border-green-accent hover:text-green-accent transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-wider">
                             <TrueFocus sentence="Download Resume" blurAmount={3} borderColor="#4ade80" glowColor="rgba(74,222,128,0.4)" animationDuration={0.4} pauseBetweenAnimations={1.5} />
                         </a>
@@ -721,6 +721,7 @@ const Hackathons: React.FC = () => (
 const JourneyTimeline: React.FC = () => {
     const timelineEvents = [
         { year: '2023-2027', title: 'VIT Pune', category: 'Education', desc: 'B.Tech Computer Engineering', icon: '\uD83C\uDF93' },
+        { year: 'Feb 2026', title: 'Patent Granted', category: 'Achievement', desc: 'IoT-Enabled Waste Fire Detection & Pollution Mapping System', icon: '\uD83D\uDCDC' },
         { year: 'Jan 2026', title: 'IEEE Publication #2', category: 'Achievement', desc: 'Second research paper published', icon: '\uD83D\uDCC4' },
         { year: '2025-2026', title: 'Technical Lead', category: 'Experience', desc: 'VishwaShauryam, VIT Pune', icon: '\uD83D\uDE80' },
         { year: 'Sep - Oct 2024', title: 'Data Science Intern', category: 'Experience', desc: 'Zidio Development', icon: '\uD83D\uDCBC' },
@@ -834,6 +835,22 @@ const Achievements: React.FC = () => {
                             </li>
                         ))}
                     </ul>
+                </div>
+
+                {/* Patents */}
+                <div className="lorris-card rounded-xl p-6 md:p-8 mb-5">
+                    <h3 className="text-sm font-semibold text-green-accent uppercase tracking-widest mb-4">Patents</h3>
+                    <div className="flex items-start group">
+                        <span className="text-green-accent mr-3 mt-0.5 text-[10px]">&#9656;</span>
+                        <div className="flex-1">
+                            <a href="https://iponline.cipc.co.za/Publications/PublishedJournals/E_Journal_May%202025%20Part%202.pdf" target="_blank" rel="noopener noreferrer" className="cursor-target text-base text-neutral-200 font-medium hover:text-green-accent transition-colors">
+                                IoT-Enabled Waste Fire Detection and Pollution Mapping System
+                            </a>
+                            <p className="text-sm text-neutral-500 mt-1">
+                                Patent Granted &bull; <a href="https://iponline.cipc.co.za/Publications/PublishedJournals/E_Journal_May%202025%20Part%202.pdf" target="_blank" rel="noopener noreferrer" className="cursor-target text-green-accent hover:underline">View Patent (Page 75)</a> &bull; February 2026
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Publications */}

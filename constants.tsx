@@ -81,6 +81,7 @@ export const aboutHighlights = [
 export const heroStats = [
     { number: '12+', label: 'Projects' },
     { number: '2', label: 'Publications' },
+    { number: '1', label: 'Patent' },
 ];
 
 export const educationData: EducationItem[] = [
@@ -135,6 +136,7 @@ export const achievementsData: string[] = [
     '10+ projects across AI, IoT, and System Design',
     'Recognized for innovation and creative system integration',
     'Designed & deployed multiple applications independently',
+    'Patent Granted — IoT-Enabled Waste Fire Detection and Pollution Mapping System',
 ];
 
 export const certificationsData = [
