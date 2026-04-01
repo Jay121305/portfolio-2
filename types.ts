@@ -6,6 +6,7 @@ export interface Project {
   image: string;
   html_url?: string;
   liveUrl?: string;
+  isPrimary?: boolean;
 }
 
 export interface SkillCategory {

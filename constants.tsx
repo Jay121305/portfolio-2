@@ -26,7 +26,26 @@ export const projectsData: Project[] = [
         longDescription: 'An innovative urban crowd-sensing application that monitors real-time crowd density using advanced deep learning models and geofencing, providing crucial safety insights.',
         tags: ['deep-learning', 'flutter', 'firebase', 'flask', 'tensorflow', 'google-maps'],
         image: 'urban-crowd-sense.png',
-        html_url: 'https://github.com/Jay121305/MindTheGap-Urban_CrowdSense'
+        html_url: 'https://github.com/Jay121305/MindTheGap-Urban_CrowdSense',
+        isPrimary: true
+    },
+    {
+        title: 'Sahaj',
+        description: '',
+        longDescription: 'A comprehensive healthcare platform built for rural India, featuring AI-powered prescription analysis, multi-language health capsules, secure consent management, and structured follow-up workflows.',
+        tags: ['react', 'nodejs', 'ai', 'healthcare', 'multilingual', 'rural-tech'],
+        image: 'sahaj.png',
+        html_url: 'https://github.com/Jay121305/Sahaj',
+        isPrimary: true
+    },
+    {
+        title: 'OpenCredit',
+        description: '',
+        longDescription: 'OpenCredit is a production-style simulation of a digital credit and payment infrastructure platform.',
+        tags: ['fintech', 'payment-systems', 'credit', 'backend', 'api', 'infrastructure'],
+        image: 'opencredit.png',
+        html_url: 'https://github.com/Jay121305/OpenCredit',
+        isPrimary: true
     },
     {
         title: 'AI-Driven-Image-Captioning-and-Segmentation',
@@ -79,7 +98,7 @@ export const aboutHighlights = [
 ];
 
 export const heroStats = [
-    { number: '12+', label: 'Projects' },
+    { number: '14+', label: 'Projects' },
     { number: '2', label: 'Publications' },
     { number: '1', label: 'Patent' },
 ];
@@ -123,11 +142,8 @@ export const experienceData: Experience[] = [
 ];
 
 export const hackathonsData: Hackathon[] = [
-    { name: 'Smart India Hackathon 2025', achievement: 'Finalist' },
     { name: 'InnerveX', achievement: 'Finalist' },
-    { name: 'NEST 2.0', achievement: 'Finalist' },
     { name: 'Bajaj HackRX 6.0', achievement: 'Finalist' },
-    { name: 'Hack for Bharat', achievement: 'Finalist' },
     { name: 'Project Morpheus', achievement: 'Finalist' },
 ];
 
