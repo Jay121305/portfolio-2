@@ -45,6 +45,7 @@ export const projectsData: Project[] = [
         tags: ['fintech', 'payment-systems', 'credit', 'backend', 'api', 'infrastructure'],
         image: 'opencredit.png',
         html_url: 'https://github.com/Jay121305/OpenCredit',
+        liveUrl: 'https://opencredit-api-ivon.onrender.com/',
         isPrimary: true
     },
     {
