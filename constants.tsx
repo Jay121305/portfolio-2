@@ -137,8 +137,9 @@ export const educationData: EducationItem[] = [
 ];
 
 export const experienceData: Experience[] = [
+    { role: 'Data Engineering Intern', context: 'eInfochips (An Arrow Company)', period: 'Jun 2026 - Present', description: 'Optimized SQL queries and data processing workflows, reducing data retrieval time by 25%+ while improving data accuracy and consistency across reporting pipelines.' },
     { role: 'Technical Lead', context: 'VishwaShauryam, VIT Pune', period: 'Sep 2025 - May 2026', description: 'Led end-to-end website development (UI/UX, backend, deployment), driving 800+ monthly visitors and boosting event registrations by 35%. Managed tech campaigns and event infra for 8+ events (300+ attendees each), leading a 6-member team with 100% uptime.' },
-    { role: 'Intern', context: 'Zidio Development', period: 'Sep 2024 - Oct 2024', description: 'Worked on backend optimization and UI design improvements.' },
+    { role: 'Intern', context: 'Zidio Development', period: 'Sep 2025 - Oct 2025', description: 'Worked on backend optimization and UI design improvements.' },
     { role: 'Social Media Head', context: 'College Club', period: 'Oct 2023 - Mar 2024', description: 'Led digital strategy and improved engagement for campus events.' },
 ];
 

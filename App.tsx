@@ -755,11 +755,11 @@ const Hackathons: React.FC = () => (
 const JourneyTimeline: React.FC = () => {
     const timelineEvents = [
         { year: '2023-2027', title: 'VIT Pune', category: 'Education', desc: 'B.Tech Computer Engineering', icon: '\uD83C\uDF93' },
+        { year: 'Jun 2026 - Present', title: 'Data Engineering Intern', category: 'Experience', desc: 'eInfochips (An Arrow Company)', icon: '\uD83D\uDCBC' },
         { year: 'Feb 2026', title: 'Patent Granted', category: 'Achievement', desc: 'IoT-Enabled Waste Fire Detection & Pollution Mapping System', icon: '\uD83D\uDCDC' },
         { year: 'Jan 2026', title: 'IEEE Publication #2', category: 'Achievement', desc: 'Second research paper published', icon: '\uD83D\uDCC4' },
-        { year: '2025-2026', title: 'Technical Lead', category: 'Experience', desc: 'VishwaShauryam, VIT Pune', icon: '\uD83D\uDE80' },
-        { year: 'Sep - Oct 2024', title: 'Data Science Intern', category: 'Experience', desc: 'Zidio Development', icon: '\uD83D\uDCBC' },
-        { year: '2025', title: 'AWS Certified', category: 'Certification', desc: 'Cloud Technology Consultant', icon: '\u2601\uFE0F' },
+        { year: 'Oct 2025', title: 'AWS Certified', category: 'Certification', desc: 'Cloud Technology Consultant', icon: '\u2601\uFE0F' },
+        { year: 'Sep - Oct 2025', title: 'Data Science Intern', category: 'Experience', desc: 'Zidio Development', icon: '\uD83D\uDCBC' },
         { year: 'Dec 2024', title: 'IEEE Publication #1', category: 'Achievement', desc: 'IoT Waste Fire Mapping', icon: '\uD83D\uDCC4' },
         { year: 'Oct 2023 - Mar 2024', title: 'Social Media Head', category: 'Experience', desc: 'College Club', icon: '\uD83D\uDCF1' },
         { year: '2011-2023', title: 'Mount St. Patrick School', category: 'Education', desc: 'High School', icon: '\uD83C\uDFEB' },
