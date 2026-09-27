@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jay Gautam | Resume</title>
+    <style>
+      :root { color-scheme: dark; --ink: #eff2ed; --muted: #a5aea8; --line: rgba(239,242,237,.18); --accent: #d5ed7d; --page: #101615; }
+      * { box-sizing: border-box; }
+      body { min-height: 100vh; margin: 0; background: var(--page); color: var(--ink); font-family: Arial, sans-serif; }
+      header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem max(1.2rem, calc((100vw - 1280px) / 2)); border-bottom: 1px solid var(--line); background: rgba(16,22,21,.92); }
+      .identity small, .identity strong { display: block; }.identity small { color: var(--muted); font: .63rem monospace; letter-spacing: .08em; text-transform: uppercase; }.identity strong { margin-top: .3rem; font-size: .9rem; }
+      .download { display: inline-flex; align-items: center; gap: .55rem; padding: .72rem .9rem; border: 1px solid var(--accent); background: var(--accent); color: #111713; font-size: .82rem; font-weight: 700; text-decoration: none; }
+      .download:hover { filter: brightness(1.08); }.download svg { width: 16px; height: 16px; }
+      main { width: min(1280px, 100%); height: calc(100vh - 76px); margin: 0 auto; padding: 1rem; }
+      iframe { width: 100%; height: 100%; border: 1px solid var(--line); background: #fff; }
+      .fallback { margin: .5rem 0 0; color: var(--muted); font-size: .75rem; text-align: center; }.fallback a { color: var(--accent); }
+      @media (max-width: 520px) { header { padding: .8rem 1rem; }.identity strong { font-size: .8rem; } main { height: calc(100vh - 71px); padding: .5rem; } .download { font-size: .72rem; padding: .65rem .72rem; } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="identity"><small>Jay Gautam / Resume</small><strong>View or save a copy</strong></div>
+      <a class="download" href="./JayGautam_VIT_Pune_DS_DE_DA.pdf" download="JayGautam_VIT_Pune_DS_DE_DA.pdf">Download resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></a>
+    </header>
+    <main>
+      <iframe title="Jay Gautam resume" src="./JayGautam_VIT_Pune_DS_DE_DA.pdf"></iframe>
+      <p class="fallback">If the preview does not appear, <a href="./JayGautam_VIT_Pune_DS_DE_DA.pdf" target="_blank" rel="noreferrer">open the resume directly</a>.</p>
+    </main>
+  </body>
+</html>

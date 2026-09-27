@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "posts"
+    label: "Beyond Work posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Short description", name: "description", widget: "text", hint: "One or two sentences for the card." }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Cover image", name: "cover", widget: "image", required: false }
+      - { label: "Post", name: "body", widget: "markdown" }

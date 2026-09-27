@@ -1,232 +1,208 @@
-import React from 'react';
-import type { Project, SkillCategory, Experience, NavLink, EducationItem, Hackathon, Publication } from './types';
-
-export const navLinks: NavLink[] = [
-  { name: 'About', href: '#about', children: [
-    { name: 'Education', href: '#education' },
-  ]},
-  { name: 'Experience', href: '#experience', children: [
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Hackathons', href: '#hackathons' },
-  ]},
-  { name: 'Beyond Work', href: '#beyond-work' },
-  { name: 'Contact', href: '#contact' },
-];
-
-export const socialLinks = {
-  linkedin: 'https://www.linkedin.com/in/jay-gautam/',
-  github: 'https://github.com/Jay121305',
+export type Project = {
+  title: string;
+  label: string;
+  description: string;
+  detail: string;
+  tags: string[];
+  image: string;
+  github: string;
+  liveUrl?: string;
+  metric: string;
+  tone: 'sun' | 'sky' | 'violet';
+  featured?: boolean;
 };
 
-export const projectsData: Project[] = [
-    {
-        title: 'MindTheGap-Urban_CrowdSense',
-        description: '',
-        longDescription: 'An innovative urban crowd-sensing application that monitors real-time crowd density using advanced deep learning models and geofencing, providing crucial safety insights.',
-        tags: ['deep-learning', 'flutter', 'firebase', 'flask', 'tensorflow', 'google-maps'],
-        image: 'urban-crowd-sense.png',
-        html_url: 'https://github.com/Jay121305/MindTheGap-Urban_CrowdSense',
-        isPrimary: true
-    },
-    {
-        title: 'Sahaj',
-        description: '',
-        longDescription: 'A comprehensive healthcare platform built for rural India, featuring AI-powered prescription analysis, multi-language health capsules, secure consent management, and structured follow-up workflows.',
-        tags: ['react', 'nodejs', 'ai', 'healthcare', 'multilingual', 'rural-tech'],
-        image: 'sahaj.png',
-        html_url: 'https://github.com/Jay121305/Sahaj',
-        isPrimary: true
-    },
-    {
-        title: 'OpenCredit',
-        description: '',
-        longDescription: 'OpenCredit is a production-style simulation of a digital credit and payment infrastructure platform.',
-        tags: ['fintech', 'payment-systems', 'credit', 'backend', 'api', 'infrastructure'],
-        image: 'opencredit.png',
-        html_url: 'https://github.com/Jay121305/OpenCredit',
-        liveUrl: 'https://opencredit-api-ivon.onrender.com/',
-        isPrimary: true
-    },
-    {
-        title: 'AI-Driven-Image-Captioning-and-Segmentation',
-        description: '',
-        longDescription: 'A powerful AI system that generates descriptive captions and performs precise segmentation for images, combining computer vision and natural language processing techniques.',
-        tags: ['tensorflow', 'cnn', 'nlp', 'opencv', 'image-captioning', 'segmentation'],
-        image: 'image-captioning.png',
-        html_url: 'https://github.com/Jay121305/AI-Driven-Image-Captioning-and-Segmentation'
-    },
-    {
-        title: 'AI-Powered-Multilingual-Review-Analysis-Summarization-System',
-        description: '',
-        longDescription: 'An intelligent system that analyzes and summarizes multilingual product reviews, leveraging large language models to extract sentiment and key insights for businesses.',
-        tags: ['llm', 'rag', 'nlp', 'gcp', 'sentiment-analysis', 'summarization'],
-        image: 'multilingual-review.png',
-        html_url: 'https://github.com/Jay121305/AI-Powered-Multilingual-Review-Analysis-Summarization-System',
-        liveUrl: 'https://jay121305.github.io/AI-Powered-Multilingual-Review-Analysis-Summarization-System/'
-    },
-    {
-        title: 'Hybrid-Image-Text-Encryption-using-Genetic-Algorithm-',
-        description: '',
-        longDescription: 'A novel security solution that uses a genetic algorithm for hybrid encryption, securely embedding text within images to ensure data confidentiality and integrity.',
-        tags: ['cryptography', 'genetic-algorithm', 'image-encryption', 'python', 'security', 'steganography'],
-        image: 'hybrid-encryption.png',
-        html_url: 'https://github.com/Jay121305/Hybrid-Image-Text-Encryption-using-Genetic-Algorithm-',
-        liveUrl: 'https://hybrid-image-and-text-encryption-using.onrender.com'
-    },
-    {
-        title: 'Migrant-Health-Management',
-        description: '',
-        longDescription: 'A comprehensive health management platform designed for migrants, utilizing OCR for document processing and AI to provide accessible and unified healthcare support.',
-        tags: ['react', 'vite', 'nodejs', 'mongodb', 'ocr', 'ai'],
-        image: 'migrant-health.png',
-        html_url: 'https://github.com/Jay121305/Migrant-Health-Management'
-    }
+export const site = {
+  name: 'Jay Gautam',
+  email: 'jaygaautam@gmail.com',
+  github: 'https://github.com/Jay121305',
+  linkedin: 'https://www.linkedin.com/in/jay-gautam/',
+  // Swap this one filename whenever the landing-page portrait changes.
+  profileImage: 'main.png',
+  resumeFile: 'JayGautam_VIT_Pune_DS_DE_DA.pdf',
+};
+
+export const navItems = [
+  { label: 'About', href: '#about' },
+  { label: 'Work', href: '#projects' },
+  { label: 'Capabilities', href: '#capabilities' },
+  { label: 'Recognition', href: '#recognition' },
+  { label: 'Beyond Work', href: '#beyond-work' },
+  { label: 'Contact', href: '#contact' },
 ];
 
-export const skillsData: SkillCategory[] = [
-    { title: 'Languages', skills: ['C', 'C++', 'Java', 'Python', 'JavaScript', 'TypeScript', 'HTML/CSS', 'SQL'] },
-    { title: 'Frameworks & Libraries', skills: ['React', 'Node.js', 'Express.js', 'Next.js', 'Flutter', 'Spring Boot', 'TensorFlow', 'PyTorch'] },
-    { title: 'Tools & Technologies', skills: ['Git', 'GitHub', 'AWS', 'MongoDB', 'MySQL', 'REST APIs', 'Linux', 'Android Studio'] },
-    { title: 'Core Competencies', skills: ['Data Structures & Algorithms', 'Object-Oriented Programming', 'Machine Learning', 'Deep Learning', 'Full-Stack Development', 'System Design', 'Agile Methodologies'] },
+export const featuredProjects: Project[] = [
+  {
+    title: 'NYC Taxi Medallion Architecture',
+    label: 'Lakehouse data engineering',
+    description: 'From raw trip records to decision-ready data.',
+    detail: 'An end-to-end Databricks lakehouse pipeline that ingests, cleans, enriches, and analyzes NYC Yellow Taxi trips through Bronze, Silver, and Gold Delta tables.',
+    tags: ['Databricks', 'PySpark', 'Spark SQL', 'Delta Lake'],
+    image: 'multilingual-review.png',
+    github: 'https://github.com/Jay121305/NYC-Taxi-Medallion-Architecture',
+    metric: '9.4M+ taxi trips · 11 notebooks · 5 Gold tables',
+    tone: 'sun',
+    featured: true,
+  },
+  {
+    title: 'OpenCredit',
+    label: 'Financial data platform',
+    description: 'A credit platform with its data integrity built in.',
+    detail: 'A production-style FastAPI and PostgreSQL platform with transaction analytics, Isolation Forest anomaly detection, audit ledgers, and role-based access control.',
+    tags: ['FastAPI', 'PostgreSQL', 'scikit-learn', 'Analytics'],
+    image: 'opencredit.png',
+    github: 'https://github.com/Jay121305/OpenCredit',
+    liveUrl: 'https://opencredit-api-ivon.onrender.com/',
+    metric: '50+ endpoints · 141 passing tests · 85% coverage',
+    tone: 'sky',
+    featured: true,
+  },
+  {
+    title: 'MindTheGap',
+    label: 'Spatial data & civic intelligence',
+    description: 'Urban signals, turned into faster action.',
+    detail: 'A real-time civic issue platform that collects geo-tagged reports, performs spatial analysis, and prioritizes incoming issues through an end-to-end analytics workflow.',
+    tags: ['Node.js', 'MongoDB', 'Flutter', 'Google Maps API'],
+    image: 'urban-crowd-sense.png',
+    github: 'https://github.com/Jay121305/MindTheGap-Urban_CrowdSense',
+    metric: '1,432 reports processed · 27.8% faster issue resolution',
+    tone: 'violet',
+    featured: true,
+  },
 ];
 
-export const aboutHighlights = [
-    { icon: '💡', text: 'AI / ML Developer' },
-    { icon: '☁️', text: 'Cloud & Web Tech Enthusiast' },
-    { icon: '🧩', text: 'Innovator & Builder' },
-    { icon: '🎯', text: 'Goal-driven and detail-oriented' }
+export const sideQuests: Project[] = [
+  {
+    title: 'Sahaj',
+    label: 'Healthcare platform',
+    description: 'Accessible health workflows for rural India.',
+    detail: 'A healthcare platform with prescription analysis, multilingual health capsules, consent management, and structured follow-up workflows.',
+    tags: ['React', 'Node.js', 'AI'],
+    image: 'sahaj.png',
+    github: 'https://github.com/Jay121305/Sahaj',
+    metric: 'Multilingual rural-health workflows',
+    tone: 'violet',
+  },
+  {
+    title: 'Multilingual Review Analysis',
+    label: 'Language intelligence',
+    description: 'Reviews distilled into useful business signals.',
+    detail: 'A multilingual review analysis and summarization system using LLM and retrieval-oriented techniques.',
+    tags: ['LLM', 'RAG', 'NLP'],
+    image: 'multilingual-review.png',
+    github: 'https://github.com/Jay121305/AI-Powered-Multilingual-Review-Analysis-Summarization-System',
+    liveUrl: 'https://jay121305.github.io/AI-Powered-Multilingual-Review-Analysis-Summarization-System/',
+    metric: 'Multilingual sentiment and summaries',
+    tone: 'sun',
+  },
+  {
+    title: 'Image Captioning & Segmentation',
+    label: 'Computer vision',
+    description: 'Images understood through language and segmentation.',
+    detail: 'A computer-vision system for caption generation and image segmentation.',
+    tags: ['TensorFlow', 'CNN', 'NLP'],
+    image: 'image-captioning.png',
+    github: 'https://github.com/Jay121305/AI-Driven-Image-Captioning-and-Segmentation',
+    metric: 'Vision + language experiment',
+    tone: 'sky',
+  },
+  {
+    title: 'Migrant Health Management',
+    label: 'Applied systems',
+    description: 'A unified health-support platform for migrant communities.',
+    detail: 'A health-management platform using OCR and AI-assisted workflows for accessible documentation and support.',
+    tags: ['React', 'MongoDB', 'OCR'],
+    image: 'migrant-health.png',
+    github: 'https://github.com/Jay121305/Migrant-Health-Management',
+    metric: 'OCR-enabled health workflows',
+    tone: 'violet',
+  },
+  {
+    title: 'Hybrid Image-Text Encryption',
+    label: 'Security exploration',
+    description: 'A genetic-algorithm approach to secure image-text handling.',
+    detail: 'A security experiment combining genetic algorithms, encryption, and image-text embedding.',
+    tags: ['Python', 'Cryptography', 'Genetic Algorithms'],
+    image: 'hybrid-encryption.png',
+    github: 'https://github.com/Jay121305/Hybrid-Image-Text-Encryption-using-Genetic-Algorithm-',
+    liveUrl: 'https://hybrid-image-and-text-encryption-using.onrender.com',
+    metric: 'Security systems exploration',
+    tone: 'sun',
+  },
 ];
 
-export const heroStats = [
-    { number: '14+', label: 'Projects' },
-    { number: '2', label: 'Publications' },
-    { number: '1', label: 'Patent' },
+export const capabilityModes = {
+  pipeline: {
+    eyebrow: '01 / Shape the data',
+    title: 'Data engineering that starts with the question.',
+    copy: 'I build practical paths from raw records to reliable, queryable datasets - with attention to modelling, data quality, performance, and the people using the result.',
+    skills: ['Databricks', 'PySpark', 'Spark SQL', 'Delta Lake', 'ETL pipelines', 'SQL'],
+  },
+  insight: {
+    eyebrow: '02 / Find the signal',
+    title: 'Analytics designed to make a decision easier.',
+    copy: 'I use statistical analysis, feature engineering, dashboards, and applied machine learning to make large or messy data more legible and actionable.',
+    skills: ['Power BI', 'Streamlit', 'scikit-learn', 'Statistical analysis', 'Matplotlib', 'Seaborn'],
+  },
+  system: {
+    eyebrow: '03 / Ship the system',
+    title: 'Software foundations that make data work useful.',
+    copy: 'When a problem needs more than a notebook, I can take it into a complete product: APIs, databases, user flows, deployment, and tested engineering decisions.',
+    skills: ['Python', 'FastAPI', 'PostgreSQL', 'REST APIs', 'React', 'Git/GitHub'],
+  },
+} as const;
+
+export const experience = [
+  {
+    period: 'Jun 2026 - Present',
+    role: 'Intern',
+    company: 'eInfochips (An Arrow Company)',
+    copy: 'Profiled and optimized complex SQL queries and data-processing workflows; audited relational database architecture for accuracy, normalization, and reporting consistency.',
+  },
+  {
+    period: 'Sep 2025 - May 2026',
+    role: 'Technical Lead',
+    company: 'VishwaShauryam, VIT Pune',
+    copy: 'Led backend and database development for the official club platform, supporting secure registration data workflows for 8+ major events and data-driven campaign analysis.',
+  },
 ];
 
-export const educationData: EducationItem[] = [
-    {
-        year: '2023-2027',
-        institution: 'VIT Pune',
-        degree: 'B.Tech in Computer Engineering',
-        focus: 'AI, ML, and Data Systems',
-        skills: [
-            'Strengthened fundamentals in data structures, algorithms, and system design.',
-            'Gained hands-on experience with AI, ML, and IoT applications through academic projects.',
-            'Improved code optimization, debugging, and documentation practices.',
-            'Developed strong skills in collaboration, version control, and agile workflows.',
-            'Explored UI/UX principles and software scalability for real-world usability.',
-            'Learned problem abstraction and structured thinking for efficient system design.',
-            'Built adaptability and technical resilience under tight deadlines and dynamic requirements.'
-        ]
-    },
-    {
-        year: '2011-2023',
-        institution: 'Mount St. Patrick\'s Academy',
-        degree: 'High School',
-        focus: 'Science & Computer Applications',
-        skills: [
-            'Built strong analytical reasoning through mathematics and computer science.',
-            'Led school sports and tech events, enhancing leadership and teamwork abilities.',
-            'Represented school in cricket and athletics, developing discipline and focus.',
-            'Cultivated early programming and logical problem-solving skills.',
-            'Balanced academics and extracurriculars, fostering a well-rounded mindset.',
-            'Learned the value of communication, consistency, and self-motivation.'
-        ]
-    }
+export const education = {
+  school: 'Vishwakarma Institute of Technology, Pune (SPPU)',
+  degree: 'B.Tech in Computer Science Engineering',
+  period: 'Jul 2023 - Jun 2027',
+};
+
+export const timeline = [
+  { period: 'Jun 2026 - Present', type: 'Experience', title: 'Intern', organization: 'eInfochips (An Arrow Company)', copy: 'Optimising SQL and data-processing workflows while auditing relational-data structure for accurate reporting.' },
+  { period: 'Feb 2026', type: 'Patent granted', title: 'IoT-Enabled Waste Fire Detection & Pollution Mapping', organization: 'Innovation milestone', copy: 'A granted patent for a system addressing waste-fire detection and pollution mapping.', href: 'https://iponline.cipc.co.za/Publications/PublishedJournals/E_Journal_May%202025%20Part%202.pdf' },
+  { period: 'Jan 2026', type: 'IEEE publication', title: 'Research paper published', organization: 'IEEE Xplore', copy: 'A second peer-reviewed publication added to my research work.', href: 'https://ieeexplore.ieee.org/document/11362604' },
+  { period: 'Sep 2025 - May 2026', type: 'Leadership', title: 'Technical Lead', organization: 'VishwaShauryam, VIT Pune', copy: 'Led backend and database development for a club platform supporting registration workflows and campaign analysis.' },
+  { period: 'Oct 2025', type: 'Certification', title: 'AWS Cloud Technology Consultant', organization: 'Amazon Web Services', copy: 'Cloud fundamentals credential supporting my systems and data foundation.', href: 'certificates/Coursera final.pdf' },
+  { period: 'Dec 2024', type: 'IEEE publication', title: 'IoT Enabled Waste Fire Pollution Mapping', organization: 'IEEE Xplore', copy: 'Published research connecting IoT sensing with pollution mapping.', href: 'https://ieeexplore.ieee.org/document/10763240' },
+  { period: 'Jul 2023 - Jun 2027', type: 'Education', title: 'B.Tech, Computer Science Engineering', organization: 'Vishwakarma Institute of Technology, Pune', copy: 'Building foundations in data, software engineering, and applied systems.' },
 ];
 
-export const experienceData: Experience[] = [
-    { role: 'Data Engineering Intern', context: 'eInfochips (An Arrow Company)', period: 'Jun 2026 - Present', description: 'Optimized SQL queries and data processing workflows, reducing data retrieval time by 25%+ while improving data accuracy and consistency across reporting pipelines.' },
-    { role: 'Technical Lead', context: 'VishwaShauryam, VIT Pune', period: 'Sep 2025 - May 2026', description: 'Led end-to-end website development (UI/UX, backend, deployment), driving 800+ monthly visitors and boosting event registrations by 35%. Managed tech campaigns and event infra for 8+ events (300+ attendees each), leading a 6-member team with 100% uptime.' },
-    { role: 'Intern', context: 'Zidio Development', period: 'Sep 2025 - Oct 2025', description: 'Worked on backend optimization and UI design improvements.' },
-    { role: 'Social Media Head', context: 'College Club', period: 'Oct 2023 - Mar 2024', description: 'Led digital strategy and improved engagement for campus events.' },
-];
-
-export const hackathonsData: Hackathon[] = [
-    { name: 'InnerveX', achievement: 'Finalist' },
-    { name: 'Bajaj HackRX 6.0', achievement: 'Finalist' },
-    { name: 'Project Morpheus', achievement: 'Finalist' },
-];
-
-export const achievementsData: string[] = [
-    'Finalist in Smart India Hackathon 2025',
-    '10+ projects across AI, IoT, and System Design',
-    'Recognized for innovation and creative system integration',
-    'Designed & deployed multiple applications independently',
-    'Patent Granted — IoT-Enabled Waste Fire Detection and Pollution Mapping System',
-];
-
-export const certificationsData = [
-    {
-        name: 'AWS Cloud Technology Consultant',
-        provider: 'Amazon Web Services',
-        url: 'certificates/Coursera final.pdf',
-        isMajor: true
-    },
-    {
-        name: 'Machine Learning',
-        provider: 'InternForte',
-        url: 'certificates/Machine_Learning-Jay_Gautam.pdf',
-        isMajor: true
-    },
-    {
-        name: 'Health in Pixels - Startup Hackathon 2025',
-        provider: 'Startup Hackathon Cohort 2025',
-        url: 'certificates/Health_in_Pixels_Startup_Hackathon_2025.pdf',
-        isMajor: false
-    },
-    {
-        name: 'TechFiesta 2026 - DDos_Me_Daddy',
-        provider: 'Pune Institute of Computer Technology (PICT)',
-        url: 'certificates/TechFiesta_2026_DDos_Me_Daddy.pdf',
-        isMajor: false
-    },
-];
-
-export const publicationsData: Publication[] = [
-    {
-        title: 'IoT Enabled Waste Fire Pollution Mapping',
-        venue: 'IEEE Xplore',
-        year: 'December 2024',
-        date: 'December 3, 2024',
-        url: 'https://ieeexplore.ieee.org/document/10763240'
-    },
-    {
-        title: 'IEEE Conference Publication',
-        venue: 'IEEE Xplore',
-        year: 'January 2026',
-        date: 'January 30, 2026',
-        url: 'https://ieeexplore.ieee.org/document/11362604'
-    }
-];
-
-export const researchInterestsData: string[] = [
-    'AI Explainability',
-    'Hybrid Model Architectures',
-    'Human-AI Interaction',
-    'Sustainable Tech Systems',
-];
-
-// Icons
-export const LinkedInIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-    <rect x="2" y="9" width="4" height="12"></rect>
-    <circle cx="4" cy="4" r="2"></circle>
-  </svg>
-);
-
-export const GitHubIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-  </svg>
-);
-
-// FIX: Corrected a typo in the viewBox attribute of the SVG component.
-export const ArrowRightIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
-    </svg>
-);
+export const recognition = {
+  patent: {
+    label: 'Granted patent',
+    title: 'IoT-Enabled Waste Fire Detection & Pollution Mapping',
+    copy: 'A recognised invention exploring connected sensing for faster waste-fire detection and pollution mapping.',
+    href: 'https://iponline.cipc.co.za/Publications/PublishedJournals/E_Journal_May%202025%20Part%202.pdf',
+    detail: 'Published journal reference · page 75',
+  },
+  publications: [
+    { title: 'IoT Enabled Waste Fire Pollution Mapping', source: 'IEEE Xplore · Dec 2024', href: 'https://ieeexplore.ieee.org/document/10763240' },
+    { title: 'Research publication', source: 'IEEE Xplore · Jan 2026', href: 'https://ieeexplore.ieee.org/document/11362604' },
+  ],
+  achievements: [
+    'Finalist · Smart India Hackathon 2025',
+    '10+ projects across AI, IoT, analytics, and systems design',
+    'Technical lead · VishwaShauryam, VIT Pune',
+  ],
+  certificates: [
+    { title: 'AWS Cloud Technology Consultant', issuer: 'Amazon Web Services', href: 'certificates/Coursera final.pdf' },
+    { title: 'Machine Learning', issuer: 'InternForte', href: 'certificates/Machine_Learning-Jay_Gautam.pdf' },
+    { title: 'Health in Pixels Startup Hackathon 2025', issuer: 'Participation certificate', href: 'certificates/Health_in_Pixels_Startup_Hackathon_2025.pdf' },
+  ],
+};
